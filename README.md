@@ -6,3 +6,4 @@ Vamos a :
 * usar git como controlador de versiones y github como repositorio + servidor.
 * agregar animaciones para ganar dinamismo en nuestro sitio.
 * usar sass para mejorar el código css nativo.
+* aplicar SEO a nuestras paginas.
