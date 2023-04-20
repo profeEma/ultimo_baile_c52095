@@ -1,3 +1,108 @@
+.gridIndex {
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: auto auto auto;
+}
 
+.bgTop {
+  background-image: linear-gradient(to bottom, lightblue, transparent);
+}
+
+.bgBottom {
+  background-image: linear-gradient(to top, lightblue, transparent);
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+}
+@media only screen and (max-width: 768px) {
+  header {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+
+main {
+  display: grid;
+  grid-template-areas: "imgEncabezado imgEncabezado" "titulo titulo" "pIzq iDer";
+  grid-template-columns: 50% 50%;
+  grid-template-rows: auto auto auto;
+}
+main .imgEncabezado {
+  grid-area: imgEncabezado;
+}
+main .titulo {
+  grid-area: titulo;
+}
+main .parrafoIzq {
+  grid-area: pIzq;
+}
+main .imgDer {
+  grid-area: iDer;
+}
+@media only screen and (max-width: 768px) {
+  main {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  footer {
+    display: grid;
+    grid-template-areas: "logo rrss contacto" "copy copy copy";
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto auto;
+  }
+  footer .logo {
+    grid-area: logo;
+  }
+  footer .rrss {
+    grid-area: rrss;
+  }
+  footer .contacto {
+    grid-area: contacto;
+  }
+  footer .copy {
+    grid-area: copy;
+  }
+}
+
+.img-fluida {
+  width: 100%;
+  height: auto;
+}
+
+ul {
+  display: flex;
+}
+@media only screen and (max-width: 768px) {
+  ul {
+    flex-wrap: wrap;
+  }
+}
+ul li {
+  list-style-type: none;
+  padding: 10px;
+  margin: 2px;
+}
+ul li a {
+  text-decoration: none;
+  color: black;
+  transition: all 1s;
+  font-size: 20px;
+}
+ul li a:hover {
+  color: blueviolet;
+}
 
 /*# sourceMappingURL=style.css.map */

@@ -1,0 +1,55 @@
+.gridIndex{
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: auto auto auto;
+}
+.bgTop{
+    background-image: linear-gradient(to bottom, lightblue, transparent);
+}
+.bgBottom{
+    background-image: linear-gradient(to top, lightblue, transparent);
+}
+header{display:flex;justify-content: space-between;
+    @media only screen and (max-width:768px){
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
+main{
+    display:grid;
+    grid-template-areas: 
+    "imgEncabezado imgEncabezado"
+    "titulo titulo"
+    "pIzq iDer";
+    grid-template-columns: 50% 50%;
+    grid-template-rows: auto auto auto;
+    .imgEncabezado{grid-area: imgEncabezado;}
+    .titulo{grid-area:titulo;}
+    .parrafoIzq{grid-area:pIzq;}
+    .imgDer{grid-area:iDer;}
+    @media only screen and (max-width:768px){
+        display: flex;
+        flex-direction: column;
+    }
+}
+footer{
+    @media only screen and (max-width:768px){
+        display:flex;
+        flex-direction: column;
+        justify-content: center;
+        align-content: center;
+    }
+    @media only screen and (min-width:1024px){
+    display:grid;
+    grid-template-areas: 
+    "logo rrss contacto"
+    "copy copy copy";
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: auto auto;
+    .logo{grid-area:logo;}
+    .rrss{grid-area:rrss;}
+    .contacto{grid-area:contacto;}
+    .copy{grid-area:copy;}
+    }
+}
+.img-fluida{width:100%;height:auto;}

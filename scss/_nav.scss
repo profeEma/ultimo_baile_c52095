@@ -1,0 +1,20 @@
+ul{
+    display:flex;
+    @media only screen and (max-width:768px){
+        flex-wrap: wrap;
+    }
+    li{
+        list-style-type: none;
+        padding:10px;
+        margin:2px;
+        a{
+            text-decoration:none;
+            color:black;
+            transition: all 1s;
+            font-size:20px;
+            &:hover{
+                color:blueviolet;
+            }
+        }
+    }
+}
